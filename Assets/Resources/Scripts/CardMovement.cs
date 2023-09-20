@@ -1,18 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CardMovement : MonoBehaviour
+public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform defaultParent;
+
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        defaultParent = transform.parent;
+        transform.SetParent(defaultParent.parent, false);
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnDrag(PointerEventData eventData)
     {
-        
+        transform.position = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        transform.SetParent(defaultParent, false);
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+    }
+
+    public void SetCardTransform(Transform parentTransform)
+    {
+        Debug.Log("test");
+        defaultParent = parentTransform;
+        transform.SetParent(defaultParent);
     }
 }
+

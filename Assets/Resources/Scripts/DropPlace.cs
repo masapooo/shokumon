@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DropPlace : MonoBehaviour
+public class DropPlace : MonoBehaviour, IDropHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnDrop(PointerEventData eventData)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        CardMovement card = eventData.pointerDrag.GetComponent<CardMovement>();
+        if (card != null)
+        {
+            card.defaultParent = this.transform;
+        }
     }
 }

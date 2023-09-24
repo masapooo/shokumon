@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardEntity : MonoBehaviour
+[CreateAssetMenu(fileName ="CardEntity", menuName ="Create CardEntity")]
+//カードデータ
+public class CardEntity : ScriptableObject 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public new string type;
+    public new string subtype;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

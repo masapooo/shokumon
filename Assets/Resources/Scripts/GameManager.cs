@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     bool isPlayerTurn;
 
+    List<int> playerDeck = new List<int>() {1,2,3,4};
+    List<int> EnemyDeck = new List<int>() {1,2,3,4};
+
     public static GameManager instance;
     private void Awake()
     {
@@ -37,11 +40,25 @@ public class GameManager : MonoBehaviour
 
     void SettingInitHand()
     {
+        // カードをそれぞれに三枚配る
         for (int i = 0; i < 3; i++)
         {
-            CreateCard(playerHandTransform);
-            CreateCard(enemyHandTransform);
+            GiveCardToHand(playerDeck, playerHandTransform);
+            GiveCardToHand(enemyDeck, enemyHandTransform);
         }
+    }
+    void GiveCardToHand(List<int> deck, Transform hand)
+    {
+            int cardID = deck[0];
+            deck.RemoveAt(0);
+            CreateCard(cardID, hand);
+    }
+
+    void CreateCard(Transform hand)
+    {
+        //　カードの生成とデータの受け渡し
+        CardController card = Instantiate(cardPrefab, hand, false);
+        card.Init(cardID);
     }
 
     void TurnCalc()
@@ -61,11 +78,11 @@ public class GameManager : MonoBehaviour
         isPlayerTurn = !isPlayerTurn;
         if (isPlayerTurn)
         {
-            CreateCard(playerHandTransform);
+            GiveCardCreateCard(playerDeck, playerHandTransform);
         }
         else
         {
-            CreateCard(enemyHandTransform);
+            GiveCardCreateCard(enemyDeck, enemyHandTransform);
         }
         TurnCalc();
     }
@@ -86,10 +103,5 @@ public class GameManager : MonoBehaviour
         CardController defender = playerFieldCardList[0];
 
         ChangeTurn();
-    }
-    void CreateCard(Transform hand)
-    {
-        CardController card = Instantiate(cardPrefab, hand, false);
-        card.Init(2);
     }
 }

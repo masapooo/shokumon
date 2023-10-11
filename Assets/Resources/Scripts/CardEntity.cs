@@ -6,6 +6,7 @@ using UnityEngine;
 //カードデータ
 public class CardEntity : ScriptableObject 
 {
+    public new string name;
     public new string type;
     public new string subtype;
 

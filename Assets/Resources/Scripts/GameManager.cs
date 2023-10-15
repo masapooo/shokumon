@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+//カードを配る
     [SerializeField]
     Transform playerHandTransform,
                                playerFieldTransform,
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     bool isPlayerTurn;
 
     List<int> playerDeck = new List<int>() {1,2,3,4};
-    List<int> EnemyDeck = new List<int>() {1,2,3,4};
+    List<int> enemyDeck = new List<int>() {1,2,3,4};
 
     public static GameManager instance;
     private void Awake()
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
             CreateCard(cardID, hand);
     }
 
-    void CreateCard(Transform hand)
+    void CreateCard(int cardID, Transform hand)
     {
         //　カードの生成とデータの受け渡し
         CardController card = Instantiate(cardPrefab, hand, false);
@@ -78,11 +78,11 @@ public class GameManager : MonoBehaviour
         isPlayerTurn = !isPlayerTurn;
         if (isPlayerTurn)
         {
-            GiveCardCreateCard(playerDeck, playerHandTransform);
+            GiveCardToHand(playerDeck, playerHandTransform);
         }
         else
         {
-            GiveCardCreateCard(enemyDeck, enemyHandTransform);
+            GiveCardToHand(enemyDeck, enemyHandTransform);
         }
         TurnCalc();
     }

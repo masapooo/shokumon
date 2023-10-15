@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e2aa3382c655c344b69019f349b9d20, type: 3}
   m_Name: Card3
   m_EditorClassIdentifier: 
-  name: 
-  type: 
-  subtype: 
+  name: "\u7389\u306D\u304E\u30CA\u30A4\u30C8"
+  type: "\u98DF\u6750"
+  subtype: "\u30D0\u30E9\u30F3\u30B9"

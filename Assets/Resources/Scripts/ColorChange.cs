@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColorChange : MonoBehaviour
 {
-  MeshRenderer mr;
-
+  //MeshRenderer mr;
+  Image image;
   void Start ()
   {
-    mr = GetComponent<MeshRenderer>();
-    mr.material.color = mr.material.color - new Color32(0,0,0,255);
+        image = GetComponent<Image>();
+        image.color = image.color - new Color32(0,0,0,255);
+    //mr = GetComponent<MeshRenderer>();
+    //mr.material.color = mr.material.color - new Color32(0,0,0,255);
   }
 }

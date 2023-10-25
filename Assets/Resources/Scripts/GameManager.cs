@@ -49,8 +49,9 @@ public class GameManager : MonoBehaviour
     }
     void GiveCardToHand(List<int> deck, Transform hand)
     {
-            int cardID = deck[0];
-            deck.RemoveAt(0);
+        int r = Random.Range(0, deck.Count);
+            int cardID = deck[r];
+            deck.RemoveAt(r);
             CreateCard(cardID, hand);
     }
 

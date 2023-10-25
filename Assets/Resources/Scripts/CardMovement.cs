@@ -23,13 +23,16 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     {
         transform.SetParent(defaultParent, false);
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-    }
+        transform.localPosition = Vector3.zero;
+    }        
+    
 
     public void SetCardTransform(Transform parentTransform)
     {
         Debug.Log("test");
         defaultParent = parentTransform;
         transform.SetParent(defaultParent);
+
     }
 }
 

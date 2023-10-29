@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 //カードを配る
-    [SerializeField]
+    [SerializeField]CardDatabase ;
     Transform playerHandTransform,
                                playerFieldTransform,
                                enemyHandTransform,

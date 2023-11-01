@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 //カードを配る
-    [SerializeField]CardDatabase ;
+    [SerializeField] CardDatabase CardDatabase;
+
+    [SerializeField]
     Transform playerHandTransform,
                                playerFieldTransform,
                                enemyHandTransform,
@@ -59,7 +61,7 @@ public class GameManager : MonoBehaviour
     {
         //　カードの生成とデータの受け渡し
         CardController card = Instantiate(cardPrefab, hand, false);
-        card.Init(cardID);
+       // card.Init(cardID);
     }
 
     void TurnCalc()

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CardDatabase : MonoBehaviour
 {
-    public List<GameObject> cardList = new List<GameObject>();
+    public List<CardController> cardList = new List<CardController>();
 }

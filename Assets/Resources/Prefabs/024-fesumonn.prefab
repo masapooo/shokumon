@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1090172915601364975}
   - component: {fileID: -3113083062073427102}
   - component: {fileID: -2267399479247375806}
-  - component: {fileID: 1413856271016339955}
+  - component: {fileID: -7758299909086121471}
   m_Layer: 5
   m_Name: 024-fesumonn
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1413856271016339955
+--- !u!114 &-7758299909086121471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

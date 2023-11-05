@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2410486610759296203}
   - component: {fileID: -509977219576739250}
   - component: {fileID: 2916670228778943496}
-  - component: {fileID: 740802258998416649}
+  - component: {fileID: 9157142272948191849}
   m_Layer: 5
   m_Name: 025-haxtupi-mazinnsinoya
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &740802258998416649
+--- !u!114 &9157142272948191849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

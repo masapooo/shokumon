@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8102200526378973263}
   - component: {fileID: -2249692002542864978}
   - component: {fileID: 7942686622534251354}
-  - component: {fileID: -7823991224969545863}
+  - component: {fileID: 4669186339579850877}
   m_Layer: 5
   m_Name: 014-tikusannnouka
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-7823991224969545863
+--- !u!114 &4669186339579850877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

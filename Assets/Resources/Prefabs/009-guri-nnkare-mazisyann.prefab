@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5985504078232517598}
   - component: {fileID: -2558567819567968168}
   - component: {fileID: -2738220685388194573}
-  - component: {fileID: 1209470395203774952}
+  - component: {fileID: -6381699720113177614}
   m_Layer: 5
   m_Name: 009-guri-nnkare-mazisyann
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1209470395203774952
+--- !u!114 &-6381699720113177614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

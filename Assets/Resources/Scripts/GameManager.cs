@@ -5,7 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 //カードを配る
-    [SerializeField] CardDatabase CardDatabase;
+//　プレハブのデータベース作成
+// ランダムに生成する
+//
+    [SerializeField] CardDatabase cardDatabase;
 
     [SerializeField]
     Transform playerHandTransform,
@@ -16,8 +19,8 @@ public class GameManager : MonoBehaviour
 
     bool isPlayerTurn;
 
-    List<int> playerDeck = new List<int>() {1,2,3,4};
-    List<int> enemyDeck = new List<int>() {1,2,3,4};
+    List<int> playerDeck = new List<int>() {1,2,3,4,5};
+    List<int> enemyDeck = new List<int>() {1,2,3,4,5};
 
     public static GameManager instance;
     private void Awake()
@@ -42,8 +45,8 @@ public class GameManager : MonoBehaviour
 
     void SettingInitHand()
     {
-        // カードをそれぞれに三枚配る
-        for (int i = 0; i < 3; i++)
+        // カードをそれぞれに五枚配る
+        for (int i = 0; i < 5; i++)
         {
             GiveCardToHand(playerDeck, playerHandTransform);
             GiveCardToHand(enemyDeck, enemyHandTransform);
@@ -60,8 +63,9 @@ public class GameManager : MonoBehaviour
     void CreateCard(int cardID, Transform hand)
     {
         //　カードの生成とデータの受け渡し
-        CardController card = Instantiate(cardPrefab, hand, false);
-       // card.Init(cardID);
+        CardController card = Instantiate(cardDatabase.cardList[cardID],hand, false);
+        card.Init(cardID);
+        Debug.Log(card);
     }
 
     void TurnCalc()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 577148867149016062}
   - component: {fileID: 1592503045129172205}
   - component: {fileID: 3075552103570988343}
-  - component: {fileID: -5879731525332888730}
+  - component: {fileID: -2886430486709740452}
   m_Layer: 5
   m_Name: 002-torixtuki-
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-5879731525332888730
+--- !u!114 &-2886430486709740452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

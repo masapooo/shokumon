@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3685013663322797338}
   - component: {fileID: 5558858669642149845}
   - component: {fileID: 454850504216276610}
-  - component: {fileID: -4384519755192690477}
+  - component: {fileID: -2948290961355524607}
   m_Layer: 5
   m_Name: 031-masirotyann
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-4384519755192690477
+--- !u!114 &-2948290961355524607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

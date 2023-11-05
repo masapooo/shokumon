@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6259670443179823937}
   - component: {fileID: 5750467449303980137}
   - component: {fileID: 313930751381816492}
-  - component: {fileID: 137797890014838378}
+  - component: {fileID: 3791030566657357508}
   m_Layer: 5
   m_Name: 023-kyuuridoragonn
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &137797890014838378
+--- !u!114 &3791030566657357508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

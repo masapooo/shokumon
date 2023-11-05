@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4372623879482446123}
   - component: {fileID: 9036354118407033162}
   - component: {fileID: -4764267214471732133}
-  - component: {fileID: -443274567152904694}
+  - component: {fileID: -8469159829367955407}
   m_Layer: 5
   m_Name: asuparamannzai
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-443274567152904694
+--- !u!114 &-8469159829367955407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

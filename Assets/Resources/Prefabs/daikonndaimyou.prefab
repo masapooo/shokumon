@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4582863598320946985}
   - component: {fileID: -1818912778679362082}
   - component: {fileID: -5951496789571138559}
-  - component: {fileID: -5744783233980537231}
+  - component: {fileID: -6202711154445421809}
   m_Layer: 5
   m_Name: daikonndaimyou
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-5744783233980537231
+--- !u!114 &-6202711154445421809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

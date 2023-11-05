@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1111355531400221262}
   - component: {fileID: -3976623527911855729}
   - component: {fileID: 3807827037039691004}
-  - component: {fileID: -8857870588127061239}
+  - component: {fileID: -8334035305607540921}
   m_Layer: 5
   m_Name: 008-guratannkinngu
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-8857870588127061239
+--- !u!114 &-8334035305607540921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

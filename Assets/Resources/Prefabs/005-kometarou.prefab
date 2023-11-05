@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6749829182786244368}
   - component: {fileID: -9176509274695296690}
   - component: {fileID: 7530559257436597772}
-  - component: {fileID: -3893679424125525954}
+  - component: {fileID: 377482172391739333}
   m_Layer: 5
   m_Name: 005-kometarou
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-3893679424125525954
+--- !u!114 &377482172391739333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

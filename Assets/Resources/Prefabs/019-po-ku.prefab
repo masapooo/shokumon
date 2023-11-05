@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8135805709236767754}
   - component: {fileID: -4224329582140114014}
   - component: {fileID: -7758884454153594754}
-  - component: {fileID: -1535405159151110571}
+  - component: {fileID: 7939319235760951516}
   m_Layer: 5
   m_Name: 019-po-ku
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-1535405159151110571
+--- !u!114 &7939319235760951516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

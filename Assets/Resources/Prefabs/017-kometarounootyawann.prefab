@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2328033973617977550}
   - component: {fileID: 3694363211659417981}
   - component: {fileID: 3888725501753821440}
-  - component: {fileID: 3564292697537194272}
+  - component: {fileID: 7788261740614523674}
   m_Layer: 5
   m_Name: 017-kometarounootyawann
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3564292697537194272
+--- !u!114 &7788261740614523674
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2107428667305402209}
   - component: {fileID: 23730680784415871}
   - component: {fileID: 5501340577629230786}
-  - component: {fileID: 8450428911193294277}
+  - component: {fileID: 4693013596972790620}
   m_Layer: 5
   m_Name: 003-tamaneginaito
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &8450428911193294277
+--- !u!114 &4693013596972790620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2221867983285804011}
   - component: {fileID: -4534041779992479680}
   - component: {fileID: 5709746168813368813}
-  - component: {fileID: -8339159895154937372}
+  - component: {fileID: -3770849698652002444}
   m_Layer: 5
   m_Name: co-dakouriyamanoko-hi-kaxtupu
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-8339159895154937372
+--- !u!114 &-3770849698652002444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

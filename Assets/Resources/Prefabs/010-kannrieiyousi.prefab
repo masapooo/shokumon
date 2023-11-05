@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1037848182205377996}
   - component: {fileID: 7315468511262395247}
   - component: {fileID: -7639051183059159309}
-  - component: {fileID: -7633193931504231798}
+  - component: {fileID: 2602759476562090418}
   m_Layer: 5
   m_Name: 010-kannrieiyousi
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-7633193931504231798
+--- !u!114 &2602759476562090418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

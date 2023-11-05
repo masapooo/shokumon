@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5669298405986098083}
   - component: {fileID: -2343691262953148049}
   - component: {fileID: -3612296935172017633}
-  - component: {fileID: 4434547834835904621}
+  - component: {fileID: -8798330004448931792}
   m_Layer: 5
   m_Name: 001-uxtusi-
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &4434547834835904621
+--- !u!114 &-8798330004448931792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2412919945447013044}
   - component: {fileID: 8242668572744554168}
   - component: {fileID: 7979457105911927988}
-  - component: {fileID: 1195493009097130068}
+  - component: {fileID: 3324986904021340455}
   m_Layer: 5
   m_Name: 021-su-pa-gextuthi
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1195493009097130068
+--- !u!114 &3324986904021340455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

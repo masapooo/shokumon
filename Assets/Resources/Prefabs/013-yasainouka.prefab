@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 831470244400391846}
   - component: {fileID: 884153321782823355}
   - component: {fileID: 8687878887357316978}
-  - component: {fileID: 3200461002431615754}
+  - component: {fileID: 7567346877317908589}
   m_Layer: 5
   m_Name: 013-yasainouka
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3200461002431615754
+--- !u!114 &7567346877317908589
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

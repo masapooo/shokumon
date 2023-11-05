@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4462508642022700825}
   - component: {fileID: 8991292521317907741}
   - component: {fileID: 4031019746342912926}
-  - component: {fileID: 3870656414190017231}
+  - component: {fileID: 6285237260469890916}
   m_Layer: 5
   m_Name: 004-hourennouzi
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3870656414190017231
+--- !u!114 &6285237260469890916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5604381593453102050}
   - component: {fileID: 8600036506228005810}
   - component: {fileID: 3924450062205440902}
-  - component: {fileID: 3767371710821733744}
+  - component: {fileID: -6663258828464535292}
   m_Layer: 5
   m_Name: 022-naporitannsoruzya-
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3767371710821733744
+--- !u!114 &-6663258828464535292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8866838692093291638}
   - component: {fileID: -7827170963652513859}
   - component: {fileID: -6475693711316700208}
-  - component: {fileID: 3769420133757458811}
+  - component: {fileID: 3719190395040899452}
   m_Layer: 5
   m_Name: 007-gyuudonnkaiza-
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &3769420133757458811
+--- !u!114 &3719190395040899452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8356631824720687351}
   - component: {fileID: 3776839110252113813}
   - component: {fileID: -1308934993840689829}
-  - component: {fileID: -6727039587057125412}
+  - component: {fileID: 5056784202754658185}
   m_Layer: 5
   m_Name: 006-potetora
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-6727039587057125412
+--- !u!114 &5056784202754658185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

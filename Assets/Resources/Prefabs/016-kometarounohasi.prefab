@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1935730166621171255}
   - component: {fileID: -1404634819153405851}
   - component: {fileID: -2337275040329364054}
-  - component: {fileID: 1372324368495105882}
+  - component: {fileID: -909576661241138480}
   m_Layer: 5
   m_Name: 016-kometarounohasi
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &1372324368495105882
+--- !u!114 &-909576661241138480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

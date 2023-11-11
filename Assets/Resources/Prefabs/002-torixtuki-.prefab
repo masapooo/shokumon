@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 577148867149016062}
   - component: {fileID: 1592503045129172205}
   - component: {fileID: 3075552103570988343}
-  - component: {fileID: -2886430486709740452}
+  - component: {fileID: -4402699235039117980}
   m_Layer: 5
   m_Name: 002-torixtuki-
   m_TagString: Untagged
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 90, y: 128.5}
+  m_SizeDelta: {x: 60, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &577148867149016056
 CanvasRenderer:
@@ -157,7 +157,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-2886430486709740452
+--- !u!114 &-4402699235039117980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,4 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a7f91e4273fdb488b59084baf802ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardType: 0
+  attribute: 2
   movement: {fileID: 0}

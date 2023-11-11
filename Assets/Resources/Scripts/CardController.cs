@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CardController : MonoBehaviour
-{        
+{   
+    public CardType cardType;    
+    public CardAttribute attribute;
     //public CardModel model;        
     public CardMovement movement;  
 
@@ -33,4 +35,18 @@ public class CardController : MonoBehaviour
         //     Destroy(this.gameObject);
         // }
     }
+}
+
+public enum CardAttribute
+{
+    Energy,
+    Balance,
+    Power,
+    None,
+}
+public enum CardType
+{
+    Food,
+    Nutrition,
+    Human,
 }

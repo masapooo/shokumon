@@ -8,19 +8,20 @@ public class GameManager : MonoBehaviour
 //　プレハブのデータベース作成
 // ランダムに生成する
 //
-    [SerializeField] CardDatabase cardDatabase;
+    //[SerializeField] CardDatabase cardDatabase;
 
     [SerializeField]
     Transform playerHandTransform,
                                playerFieldTransform,
                                enemyHandTransform,
                                enemyFieldTransform;
-    [SerializeField] CardController cardPrefab;
+    //[SerializeField] CardController cardPrefab;
+    [SerializeField] CardDatabase cardDatabase;
 
     bool isPlayerTurn;
 
-    List<int> playerDeck = new List<int>() {1,2,3,4,5};
-    List<int> enemyDeck = new List<int>() {1,2,3,4,5};
+    List<int> playerDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
+    List<int> enemyDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
 
     public static GameManager instance;
     private void Awake()
@@ -63,9 +64,12 @@ public class GameManager : MonoBehaviour
     void CreateCard(int cardID, Transform hand)
     {
         //　カードの生成とデータの受け渡し
-        CardController card = Instantiate(cardDatabase.cardList[cardID],hand, false);
-        card.Init(cardID);
-        Debug.Log(card);
+        Debug.Log("GameManager:" + cardID);
+        Debug.Log("GameManager:" + cardDatabase);
+        Debug.Log("GameManager:" + cardDatabase.GetCardPrefab(cardID));
+        CardController card = Instantiate(cardDatabase.GetCardPrefab(cardID),hand, false);
+        //card.Init(cardID);
+        Debug.Log("GameManager:" + card);
     }
 
     void TurnCalc()

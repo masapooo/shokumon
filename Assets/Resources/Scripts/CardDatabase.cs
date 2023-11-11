@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class CardDatabase : MonoBehaviour
 {
-    public List<CardController> cardList = new List<CardController>();
+    [SerializeField] List<CardController> cardControllers = new List<CardController>();
+    public CardController GetCardPrefab(int cardID)
+    {
+        Debug.Log("CardDatabase:" + cardID);
+        Debug.Log("CardDatabase:" + cardControllers[cardID]);
+        return cardControllers[cardID];
+    }
 }

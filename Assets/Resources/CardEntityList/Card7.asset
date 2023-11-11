@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e2aa3382c655c344b69019f349b9d20, type: 3}
-  m_Name: Card5
+  m_Name: Card7
   m_EditorClassIdentifier: 
-  name: "\u3053\u3081\u305F\u308D\u3046"
-  type: "\u98DF\u6750"
+  name: Energy
+  type: "\u6804\u990A\u7D20"
   subtype: "\u30A8\u30CD\u30EB\u30AE\u30FC"

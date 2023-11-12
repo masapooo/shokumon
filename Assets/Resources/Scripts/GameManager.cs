@@ -64,12 +64,8 @@ public class GameManager : MonoBehaviour
     void CreateCard(int cardID, Transform hand)
     {
         //　カードの生成とデータの受け渡し
-        Debug.Log("GameManager:" + cardID);
-        Debug.Log("GameManager:" + cardDatabase);
-        Debug.Log("GameManager:" + cardDatabase.GetCardPrefab(cardID));
         CardController card = Instantiate(cardDatabase.GetCardPrefab(cardID),hand, false);
         //card.Init(cardID);
-        Debug.Log("GameManager:" + card);
     }
 
     void TurnCalc()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
@@ -16,18 +17,20 @@ public class DiceController : MonoBehaviour
 
     [SerializeField] Text numText;
 
+    public UnityAction OnRollEnd;
+    public bool wasRolled;
+    public int number;
+
     private void Start()
     {
         diceImage = diceObject.GetComponent<Image>();
         rb2D = diceObject.GetComponent<Rigidbody2D>();
         images = Resources.LoadAll<Sprite>("Dice");
-        images = Resources.LoadAll<Sprite>("Dice");
+        //Roll();
     }
 
     public void Roll()
     {
-        Debug.Log(diceObject);
-        Debug.Log(isRandom);
         if (diceObject == null)
         {
             return;
@@ -35,17 +38,14 @@ public class DiceController : MonoBehaviour
 
         if (isRandom)
         {
-            Debug.Log("ロール3");
             if (rb2D != null && !rb2D.IsSleeping())
             {
                 int num = Random.Range(1, 7); // 1から6に変更
-                Debug.Log(images[num - 1]);
                 diceImage.sprite = images[num - 1]; // 0から5に変更
                 preNum = num;
             }
             else
             {
-                Debug.Log(preNum + 1);
                 isRandom = false;
             }
         }
@@ -55,7 +55,6 @@ public class DiceController : MonoBehaviour
     public void OnClickDice()
     {
         Roll();
-        Debug.Log("サイコロ");
         if (rb2D != null && rb2D.IsSleeping() && !isRandom)
         {
             rb2D.AddForce(new Vector2(0f, 10000f));
@@ -65,7 +64,7 @@ public class DiceController : MonoBehaviour
 
     IEnumerator RollAnimation()
     {
-        int rolls = 50; // サイコロの回転回数
+        int rolls = 30; // サイコロの回転回数
         float rollDuration = 0.05f; // 1回の回転にかかる時間
 
         for (int i = 0; i < rolls; i++)
@@ -79,13 +78,14 @@ public class DiceController : MonoBehaviour
             yield return new WaitForSeconds(rollDuration);
         }
 
-        int finalNum = Random.Range(1, 7);
+        number = Random.Range(1, 7);
 
         // 最終的な結果の画像を表示
-        diceImage.sprite = images[finalNum - 1];
+        diceImage.sprite = images[number - 1];
 
         // テキストも更新
-        numText.text = finalNum.ToString();
+        numText.text = number.ToString();
+        wasRolled = true;
+        OnRollEnd?.Invoke();
     }
-
 }

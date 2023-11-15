@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
                                enemyFieldTransform;
     //[SerializeField] CardController cardPrefab;
     [SerializeField] CardDatabase cardDatabase;
+    [SerializeField] DiceManager diceManager;
 
     bool isPlayerTurn;
 
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        diceManager.OnRollEndAction += OnRollEnd;
         StartGame();
     }
 
@@ -110,5 +112,15 @@ public class GameManager : MonoBehaviour
         CardController defender = playerFieldCardList[0];
 
         ChangeTurn();
+    }
+    public void OnTurnEndButton()
+    {
+        //サイコロを振る
+        Debug.Log("OnTurnEndButton");
+        diceManager.RollDice();
+    }
+    void OnRollEnd()
+    {
+        Debug.Log("GameManager OnRollEnd");
     }
 }

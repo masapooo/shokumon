@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class DropPlace : MonoBehaviour, IDropHandler
 {
@@ -30,12 +31,14 @@ public class DropPlace : MonoBehaviour, IDropHandler
             {
                 wasSet = true;
                 card.defaultParent = this.transform;
+                card.GetComponent<Image>().raycastTarget = false;
 
                 Debug.Log(subZone);
 
                 // wasSetがtrueになったときにSubZoneをActiveにする
                 if (subZone != null)
                 {
+                    Debug.Log("アクティブ");
                     subZone.SetActive(true);
                 }
             }

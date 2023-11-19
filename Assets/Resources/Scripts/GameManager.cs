@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
 
     bool isPlayerTurn;
 
-    List<int> playerDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
-    List<int> enemyDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27};
+    List<int> playerDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+    List<int> enemyDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 
     public static GameManager instance;
     private void Awake()
@@ -55,12 +55,22 @@ public class GameManager : MonoBehaviour
             GiveCardToHand(enemyDeck, enemyHandTransform);
         }
     }
+
     void GiveCardToHand(List<int> deck, Transform hand)
     {
         int r = Random.Range(0, deck.Count);
-            int cardID = deck[r];
-            deck.RemoveAt(r);
-            CreateCard(cardID, hand);
+        int cardID = deck[r];
+        deck.RemoveAt(r);
+        CreateCard(cardID, hand);
+
+        // 手札にカードを追加する処理が必要
+        CardController cardController = hand.GetComponentInChildren<CardController>();
+        if (cardController != null)
+        {
+            // 手札に追加されたカードの処理を行う（例: 表示位置を設定するなど）
+            // 以下は例示で実際の処理に合わせて変更してください
+            cardController.movement.SetCardTransform(hand);
+        }
     }
 
     void CreateCard(int cardID, Transform hand)
@@ -104,15 +114,42 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("EnemyTurn");
         CardController[] handCardList = enemyHandTransform.GetComponentsInChildren<CardController>();
-        CardController enemyCard = handCardList[0];
-        enemyCard.movement.SetCardTransform(enemyFieldTransform);
-        CardController[] fieldCardList = enemyFieldTransform.GetComponentsInChildren<CardController>();
-        CardController attacker = fieldCardList[0];
-        CardController[] playerFieldCardList = playerFieldTransform.GetComponentsInChildren<CardController>();
-        CardController defender = playerFieldCardList[0];
+        // 手札が空でないことを確認
+        if (handCardList.Length > 0)
+        {
+            CardController enemyCard = handCardList[0];
+            //enemyCard.movement.SetCardTransform(enemyFieldTransform);
 
-        ChangeTurn();
+            CardController[] fieldCardList = enemyFieldTransform.GetComponentsInChildren<CardController>();
+
+            // フィールドにカードがあるかどうかを確認
+            if (fieldCardList.Length > 0)
+            {
+                CardController attacker = fieldCardList[0];
+                CardController[] playerFieldCardList = playerFieldTransform.GetComponentsInChildren<CardController>();
+
+                // プレイヤーのフィールドにカードがあるかどうかを確認
+                if (playerFieldCardList.Length > 0)
+                {
+                    CardController defender = playerFieldCardList[0];
+                    ChangeTurn();
+                }
+                else
+                {
+                    // プレイヤーのフィールドにカードがない場合の処理
+                }
+            }
+            else
+            {
+                // フィールドにカードがない場合の処理
+            }
+        }
+        else
+        {
+            // 手札が空の場合の処理
+        }
     }
+
     public void OnTurnEndButton()
     {
         //サイコロを振る
@@ -121,6 +158,6 @@ public class GameManager : MonoBehaviour
     }
     void OnRollEnd()
     {
-        Debug.Log("GameManager OnRollEnd");
+        Debug.Log($"GameManager OnRollEnd:{diceManager.DiceList[0].number},{diceManager.DiceList[1].number}");
     }
 }

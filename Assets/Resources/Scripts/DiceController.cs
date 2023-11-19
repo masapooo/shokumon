@@ -1,22 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using DG.Tweening;
-using UnityEngine.EventSystems;
 
 public class DiceController : MonoBehaviour
 {
     public GameObject diceObject;
-    Rigidbody2D rb2D;
+    private Rigidbody2D rb2D;
     private Image diceImage;
-    private int preNum;
     private bool isRandom = false;
-    Sprite[] images;
+    private Sprite[] images;
 
-    [SerializeField] Text numText;
-
+    [SerializeField] private Text numText;
     public UnityAction OnRollEnd;
     public bool wasRolled;
     public int number;
@@ -26,7 +21,7 @@ public class DiceController : MonoBehaviour
         diceImage = diceObject.GetComponent<Image>();
         rb2D = diceObject.GetComponent<Rigidbody2D>();
         images = Resources.LoadAll<Sprite>("Dice");
-        //Roll();
+        // Roll();
     }
 
     public void Roll()
@@ -40,9 +35,9 @@ public class DiceController : MonoBehaviour
         {
             if (rb2D != null && !rb2D.IsSleeping())
             {
-                int num = Random.Range(1, 7); // 1から6に変更
-                diceImage.sprite = images[num - 1]; // 0から5に変更
-                preNum = num;
+                // 修正：ランダムな数の範囲を修正
+                int num = Random.Range(0, 6); // 0から5に変更
+                number = num + 1; // 1から6に変更
             }
             else
             {
@@ -69,16 +64,15 @@ public class DiceController : MonoBehaviour
 
         for (int i = 0; i < rolls; i++)
         {
-            int randomNum = Random.Range(1, 7);
+            // 修正：ランダムな数の範囲を修正
+            int randomNum = Random.Range(0, 6);
 
             // 画像の切り替え
-            diceImage.sprite = images[randomNum - 1];
+            diceImage.sprite = images[randomNum];
 
             // 画像を切り替えた後に待機
             yield return new WaitForSeconds(rollDuration);
         }
-
-        number = Random.Range(1, 7);
 
         // 最終的な結果の画像を表示
         diceImage.sprite = images[number - 1];

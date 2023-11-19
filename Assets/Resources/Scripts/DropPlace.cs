@@ -26,6 +26,10 @@ public class DropPlace : MonoBehaviour, IDropHandler
             if (wasSet)
             {
                 OnCardDrop?.Invoke(card);
+                /*if ()
+                {
+
+                }*/
             }
             else
             {

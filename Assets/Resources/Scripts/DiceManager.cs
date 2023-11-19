@@ -9,6 +9,8 @@ public class DiceManager : MonoBehaviour
 
     // Dice1,2の管理
     [SerializeField] DiceController[] diceList;
+    
+    public DiceController[] DiceList { get => diceList; set => diceList = value;}
 
     private void Awake()
     {

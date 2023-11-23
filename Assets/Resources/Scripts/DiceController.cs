@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class DiceController : MonoBehaviour
 {
+    public UnityEvent OnRollComplete = new UnityEvent();//イベントの定義
     public GameObject diceObject;
     private Rigidbody2D rb2D;
     private Image diceImage;
@@ -45,6 +46,7 @@ public class DiceController : MonoBehaviour
             }
         }
         StartCoroutine(RollAnimation());
+        OnRollComplete.Invoke();//イベントを呼ぶ
     }
 
     public void OnClickDice()

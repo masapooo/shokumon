@@ -171,4 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardType: 0
   attribute: 0
+  cardDice1: 1
+  cardDice2: 6
   movement: {fileID: 0}

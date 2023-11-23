@@ -10,6 +10,7 @@ public class DropPlace : MonoBehaviour, IDropHandler
     public UnityAction<CardMovement> OnCardDrop;
     [SerializeField] CardAttribute attribute;
     [SerializeField] CardType cardType;
+    [SerializeField] CardDice cardDice;
     bool wasSet;
     [SerializeField] GameObject subZone; // SubZoneの参照をInspectorから設定
 

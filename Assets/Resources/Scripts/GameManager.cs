@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
 
     bool isPlayerTurn;
 
-    List<int> playerDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-    List<int> enemyDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+    List<int> playerDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+    List<int> enemyDeck = new List<int>() {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
 
     public static GameManager instance;
     private void Awake()
@@ -109,7 +109,14 @@ public class GameManager : MonoBehaviour
     void PlayerTurn()
     {
         Debug.Log("PlayerTurn");
+
+        // TurnDisplay1クラスのインスタンスを作成
+        TurnDisplay1 turnDisplay = new TurnDisplay1();
+
+        // Showメソッドを呼び出す
+        turnDisplay.Show();
     }
+
     void EnemyTurn()
     {
         Debug.Log("EnemyTurn");
@@ -148,6 +155,9 @@ public class GameManager : MonoBehaviour
         {
             // 手札が空の場合の処理
         }
+        TurnDisplay2 turnDisplay = new TurnDisplay2();
+        // Showメソッドを呼び出す
+        turnDisplay.Show();
     }
 
     public void OnTurnEndButton()

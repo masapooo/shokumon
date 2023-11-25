@@ -8,7 +8,7 @@ public class DiceManager : MonoBehaviour
     public UnityAction OnRollEndAction;
 
     // Dice1,2の管理
-    [SerializeField] DiceController[] diceList;
+    public DiceController[] diceList;
     
     public DiceController[] DiceList { get => diceList; set => diceList = value;}
 

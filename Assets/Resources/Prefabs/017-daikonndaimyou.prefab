@@ -169,8 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a7f91e4273fdb488b59084baf802ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardType: 2
-  attribute: 3
-  cardDice1: 3
-  cardDice2: 5
+  cardType: 0
+  attribute: 1
   movement: {fileID: 0}
+  cardDice: 0300000005000000

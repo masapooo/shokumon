@@ -8,6 +8,7 @@ public class CardController : MonoBehaviour
     public CardAttribute attribute;
     //public CardModel model;        
     public CardMovement movement;  
+    public List<CardDice> cardDice;
 
     private void Awake()
     {

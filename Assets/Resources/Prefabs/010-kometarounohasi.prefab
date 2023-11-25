@@ -172,3 +172,4 @@ MonoBehaviour:
   cardType: 2
   attribute: 3
   movement: {fileID: 0}
+  cardDice: 

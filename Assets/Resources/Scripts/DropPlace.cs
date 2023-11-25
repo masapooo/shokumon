@@ -10,7 +10,7 @@ public class DropPlace : MonoBehaviour, IDropHandler
     public UnityAction<CardMovement> OnCardDrop;
     [SerializeField] CardAttribute attribute;
     [SerializeField] CardType cardType;
-    [SerializeField] CardDice cardDice;
+    public CardController cardController;
     bool wasSet;
     [SerializeField] GameObject subZone; // SubZoneの参照をInspectorから設定
 
@@ -37,7 +37,7 @@ public class DropPlace : MonoBehaviour, IDropHandler
                 wasSet = true;
                 card.defaultParent = this.transform;
                 card.GetComponent<Image>().raycastTarget = false;
-
+                cardController = card.GetComponent<CardController>();
                 Debug.Log(subZone);
 
                 // wasSetがtrueになったときにSubZoneをActiveにする
@@ -50,5 +50,31 @@ public class DropPlace : MonoBehaviour, IDropHandler
 
             card.transform.localPosition = new Vector3(0, 0, 0);
         }
+    
+    }
+    //SubZoneに子要素が1つあるかどうか判定する
+    public bool IsFull()
+    {
+        if (subZone.transform.childCount == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    //subZoneにある子要素を削除する
+    public void RemoveChild()
+    {
+        if (subZone.transform.childCount == 1)
+        {
+            Destroy(subZone.transform.GetChild(0).gameObject);
+        }
+    }
+    // cardControllerをnullにする
+    public void RemoveCardController()
+    {
+        cardController = null;
     }
 }

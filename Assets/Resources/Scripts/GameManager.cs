@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     //[SerializeField] CardController cardPrefab;
     [SerializeField] CardDatabase cardDatabase;
     [SerializeField] DiceManager diceManager;
+    [SerializeField] DropPlace[] dropPlaces;
+    [SerializeField] PointzoneManager pointzoneManager;
 
     bool isPlayerTurn;
 
@@ -37,6 +39,8 @@ public class GameManager : MonoBehaviour
     {
         diceManager.OnRollEndAction += OnRollEnd;
         StartGame();
+        //PointzoneManagerにOnAllFullを登録
+        pointzoneManager.OnAllFull += OnAllFull;
     }
 
     void StartGame()
@@ -169,5 +173,27 @@ public class GameManager : MonoBehaviour
     void OnRollEnd()
     {
         Debug.Log($"GameManager OnRollEnd:{diceManager.DiceList[0].number},{diceManager.DiceList[1].number}");
+        foreach (var place in dropPlaces)
+        {
+            if (place.IsFull())
+            {
+                //2つのDiceの目とplaceにあるCardのDiceの目に含まれるか確認する
+                if (place.cardController.cardDice.Contains((CardDice)diceManager.DiceList[0].number) && place.cardController.cardDice.Contains((CardDice)diceManager.diceList[1].number))
+                {
+                    //Logで一致すると出す
+                    Debug.Log("一致");
+                    //PointzoneManagerにCardを渡す
+                    pointzoneManager.AddCard(place.cardController);
+                    //Cardを削除する
+                    place.RemoveChild();
+                    place.RemoveCardController();
+                }
+            }
+        }
+    }
+    //勝利判定　PointzoneにCardが配置されているなら勝利通知を出す
+    public void OnAllFull()
+    {
+        Debug.Log("勝利");
     }
 }

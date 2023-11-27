@@ -38,12 +38,10 @@ public class DropPlace : MonoBehaviour, IDropHandler
                 card.defaultParent = this.transform;
                 card.GetComponent<Image>().raycastTarget = false;
                 cardController = card.GetComponent<CardController>();
-                Debug.Log(subZone);
 
                 // wasSetがtrueになったときにSubZoneをActiveにする
                 if (subZone != null)
                 {
-                    Debug.Log("アクティブ");
                     subZone.SetActive(true);
                 }
             }

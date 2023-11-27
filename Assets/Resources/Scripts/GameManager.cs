@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 // ランダムに生成する
 //
     //[SerializeField] CardDatabase cardDatabase;
-
     [SerializeField]
     Transform playerHandTransform,
                                playerFieldTransform,
@@ -20,6 +19,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] DiceManager diceManager;
     [SerializeField] DropPlace[] dropPlaces;
     [SerializeField] PointzoneManager pointzoneManager;
+    //デバッグ用フラグ
+    [SerializeField] bool isDemo;
+    [SerializeField] TurnDisplay1 turnDisplay;
+    [SerializeField] TurnDisplay2 turnDisplay2;
 
     bool isPlayerTurn;
 
@@ -113,10 +116,6 @@ public class GameManager : MonoBehaviour
     void PlayerTurn()
     {
         Debug.Log("PlayerTurn");
-
-        // TurnDisplay1クラスのインスタンスを作成
-        TurnDisplay1 turnDisplay = new TurnDisplay1();
-
         // Showメソッドを呼び出す
         turnDisplay.Show();
     }
@@ -159,7 +158,6 @@ public class GameManager : MonoBehaviour
         {
             // 手札が空の場合の処理
         }
-        TurnDisplay2 turnDisplay = new TurnDisplay2();
         // Showメソッドを呼び出す
         turnDisplay.Show();
     }
@@ -178,7 +176,10 @@ public class GameManager : MonoBehaviour
             if (place.IsFull())
             {
                 //2つのDiceの目とplaceにあるCardのDiceの目に含まれるか確認する
-                if (place.cardController.cardDice.Contains((CardDice)diceManager.DiceList[0].number) && place.cardController.cardDice.Contains((CardDice)diceManager.diceList[1].number))
+                if (isDemo ||
+                    
+                    ((place.cardController.cardDice[0] ==(CardDice)diceManager.DiceList[0].number) && (place.cardController.cardDice[1] ==(CardDice)diceManager.diceList[1].number))
+                    ||((place.cardController.cardDice[0] ==(CardDice)diceManager.DiceList[1].number) && (place.cardController.cardDice[1] ==(CardDice)diceManager.diceList[1].number)))
                 {
                     //Logで一致すると出す
                     Debug.Log("一致");

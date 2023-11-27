@@ -29,7 +29,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void SetCardTransform(Transform parentTransform)
     {
-        Debug.Log("test");
         defaultParent = parentTransform;
         transform.SetParent(defaultParent);
 

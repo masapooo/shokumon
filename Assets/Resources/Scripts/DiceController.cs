@@ -37,14 +37,16 @@ public class DiceController : MonoBehaviour
             if (rb2D != null && !rb2D.IsSleeping())
             {
                 // 修正：ランダムな数の範囲を修正
-                int num = Random.Range(0, 6); // 0から5に変更
-                number = num + 1; // 1から6に変更
+                //int num = Random.Range(0, 6); // 0から5に変更
+                //number = num + 1; // 1から6に変更
             }
             else
             {
                 isRandom = false;
             }
         }
+        number = Random.Range(1, 7);//1~6にする
+        wasRolled = false;
         StartCoroutine(RollAnimation());
         OnRollComplete.Invoke();//イベントを呼ぶ
     }

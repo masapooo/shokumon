@@ -172,4 +172,4 @@ MonoBehaviour:
   cardType: 0
   attribute: 1
   movement: {fileID: 0}
-  cardDice: 0300000006000000
+  cardDice: 0300000005000000

@@ -10,7 +10,7 @@ public class SendMessage : MonoBehaviour
     [SerializeField] private Text message;
    public void OnClick()
    {
-        var openAIApiKey = "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";
+        var openAIApiKey = "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";
         var chatGPTConnection = new ChatGPTConnection(openAIApiKey);
         chatGPTConnection.RequestAsync("{{" + message.text + "}}");
    }

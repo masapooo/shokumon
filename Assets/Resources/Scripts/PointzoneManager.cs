@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class PointzoneManager : MonoBehaviour
 {
     [SerializeField] List<Pointzone> pointzones;
+
     public UnityAction OnAllFull;
 
     //GameManagerから渡されるCardを受け取り、PointzoneのCardAttributeと一致するPointzoneにCardを追加する

@@ -24,4 +24,3 @@ public class TurnDisplay1 : MonoBehaviour
         uiPanel.SetActive(false);
     }
 }
-

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] bool isDemo;
     [SerializeField] TurnDisplay1 turnDisplay;
     [SerializeField] TurnDisplay2 turnDisplay2;
+    [SerializeField] ScreenHidden screenHidden;
 
     bool isPlayerTurn;
 
@@ -115,14 +116,12 @@ public class GameManager : MonoBehaviour
 
     void PlayerTurn()
     {
-        Debug.Log("PlayerTurn");
         // Showメソッドを呼び出す
         turnDisplay.Show();
     }
 
     void EnemyTurn()
     {
-        Debug.Log("EnemyTurn");
         CardController[] handCardList = enemyHandTransform.GetComponentsInChildren<CardController>();
         // 手札が空でないことを確認
         if (handCardList.Length > 0)
@@ -159,13 +158,12 @@ public class GameManager : MonoBehaviour
             // 手札が空の場合の処理
         }
         // Showメソッドを呼び出す
-        turnDisplay.Show();
+        turnDisplay2.Show();
     }
 
     public void OnTurnEndButton()
     {
         //サイコロを振る
-        Debug.Log("OnTurnEndButton");
         diceManager.RollDice();
     }
     void OnRollEnd()
@@ -176,8 +174,7 @@ public class GameManager : MonoBehaviour
             if (place.IsFull())
             {
                 //2つのDiceの目とplaceにあるCardのDiceの目に含まれるか確認する
-                if (isDemo ||
-                    
+                if (
                     ((place.cardController.cardDice[0] ==(CardDice)diceManager.DiceList[0].number) && (place.cardController.cardDice[1] ==(CardDice)diceManager.diceList[1].number))
                     ||((place.cardController.cardDice[0] ==(CardDice)diceManager.DiceList[1].number) && (place.cardController.cardDice[1] ==(CardDice)diceManager.diceList[1].number)))
                 {
@@ -195,6 +192,7 @@ public class GameManager : MonoBehaviour
     //勝利判定　PointzoneにCardが配置されているなら勝利通知を出す
     public void OnAllFull()
     {
+        screenHidden.Show();
         Debug.Log("勝利");
     }
 }
